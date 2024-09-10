@@ -43,16 +43,16 @@ const config: Config = {
         },
       },
       lineHeight: {
-        '75': '75px'
+        "75": "75px",
       },
       fontFamily: {
-        noto:'NotoSansKR'
+        noto: ["Noto Sans", "sans-serif"],
       },
       fontSize: {
-        '26':'26px'
+        "26": "26px",
       },
       maxWidth: {
-        '742': '742px'
+        "742": "742px",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",

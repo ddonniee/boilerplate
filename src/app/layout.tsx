@@ -12,7 +12,7 @@ export default function RootLayout({
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <html lang="en">
+    <html lang="en font-noto">
       <body className="flex">
         <Nav isOpen={isOpen} setIsOpen={setIsOpen} />
         <main

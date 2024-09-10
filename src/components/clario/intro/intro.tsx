@@ -39,11 +39,11 @@ export default function Intro() {
           <Image
             src={isBright ? logoBright : logoDark}
             alt="main"
-            width={270}
-            height={40}
+            width={175}
+            height={49}
             className="max-w-[240px] md:max-w-[270px]"
           />
-          <p className="font-noto text-26 leading-75 ml-3 bg-gradient-to-r from-[rgba(34,172,57,1)] via-[rgba(5,111,184,1)] to-[rgba(46,167,224,1)] text-transparent bg-clip-text font-bold text-xl">
+          <p className="font-noto text-[26px] leading-[49px] ml-[25px] bg-gradient-to-r from-[rgba(34,172,57,1)] via-[rgba(5,111,184,1)] to-[rgba(46,167,224,1)] text-transparent bg-clip-text font-bold text-xl">
             {NAME}
           </p>
         </div>
