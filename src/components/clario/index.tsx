@@ -1,10 +1,11 @@
 import InitContent from "./content"
-
-export default async function Clario() {
+import Input from "@/components/ui/input"
+export default function Clario() {
 
   return (
     <>
       <InitContent />
+      <Input />
     </>
   )
 }
