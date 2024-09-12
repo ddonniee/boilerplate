@@ -3,8 +3,8 @@
 import * as React from "react";
 
 import { cn } from "@/lib/utils";
-// import IconClear from "@/images/icon-clear";
-import IconVisible from "@/images/icon-visible";
+import IconClear from "@/images/icon-clear";
+import SendButton from "@/images/search/btn-send";
 
 export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, "size"> {
@@ -29,13 +29,14 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
     }: InputProps,
     ref
   ) => {
-    const [visible, setVisible] = React.useState(true);
+    const [visible, setVisible] = React.useState(true); 
+
     return (
       <div className={cn(input.container, containerClassName)}>
         <input
           {...props}
           type={controleVisible ? (visible ? "text" : "password") : props.type}
-          className={`${InputVariants({ size, className })} ${
+          className={`relative z-10 ${InputVariants({ size, className })} ${
             props.value ? formCn.active : formCn.placeholder
           }`}
           ref={ref}
@@ -52,32 +53,32 @@ const Input = React.forwardRef<HTMLInputElement, InputProps>(
               }
             }}
           >
-            {/* <IconClear /> */}
+            <IconClear />
           </button>
         )}
-        {controleVisible && (
-          <button
-            onClick={() => setVisible(!visible)}
-            className={input.controleVisible}
-          >
-            <IconVisible visible={!visible} />
-          </button>
-        )}
+        <button
+          onClick={() => setVisible(!visible)}
+          className={input.controleVisible}
+        >
+          <SendButton  />
+        </button>
       </div>
     );
   }
 );
 
 const input = {
-  container: "inline-block w-full relative",
+  container: "relative w-full",
   clear: "absolute top-1/2 right-[16px] -translate-y-1/2",
   controleVisible: "absolute top-1/2 right-[16px] -translate-y-1/2",
 };
+
 export const formCn = {
   base: "w-full border-[0.5px] outline-none h-[42px] rounded-[6px] px-[16px] text-[15px] ",
   active: "bg-white border-black",
-  placeholder: "bg-gray-100 border-gray-100 focus:bg-white focus:border-black",
-}
+  placeholder:
+    "bg-gray-100 border-gray-100 focus:bg-white focus:border-selected",
+};
 
 const InputVariants = ({
   size,

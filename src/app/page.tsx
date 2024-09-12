@@ -8,9 +8,9 @@ function Main() {
   const [history, setHistory] = useState([]);
   return (
     <div
-      className={`flex-1 ${
+      className={`flex flex-col flex-1 ${
         isBright ? "bg-bright-bodyBg" : "bg-dark-bodyBg"
-      } p-8 h-screen`}
+      } h-screen`}
     >
       <Clario />
     </div>

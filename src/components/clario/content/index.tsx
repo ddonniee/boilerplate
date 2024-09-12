@@ -9,7 +9,7 @@ const InitContent = () => {
 
   return (
     <main
-      className={` relative flex flex-1 flex-col items-center ${
+      className={`flex-1 relative flex flex-1 flex-col items-center ${
         true ? " md:justify-start" : "md:justify-center"
       } w-full h-full px-0 md:px-5
       `}

@@ -5,3 +5,25 @@
 html, body {
     font-family: 'NotoSans';
 }
+.input {
+  position: relative;
+  z-index: 1;
+}
+
+.input:focus {
+  outline: none;
+  border: none;
+}
+
+.input:focus::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 6px;
+  padding: 2px;
+  background: linear-gradient(90deg, rgba(34, 172, 57, 1), rgba(5, 111, 184, 1), rgba(46, 167, 224, 1));
+  z-index: -1;
+}
